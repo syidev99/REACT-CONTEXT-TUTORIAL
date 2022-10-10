@@ -16,10 +16,11 @@ const ColorProvider = ({ children }) => {
         state: { color, subcolor },
         actions: { setColor, setSubcolor },
     };
-    return <ColorContext.provider value={value}>{children}</ColorContext.provider>;
+
+    return <ColorContext.Provider value={value}>{children}</ColorContext.Provider>;
 };
 
 const { Consumer: ColorConsumer } = ColorContext;
-export { ColorProvider, ColorConsumer };
 
+export { ColorProvider, ColorConsumer };
 export default ColorContext;
